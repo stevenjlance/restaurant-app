@@ -1,10 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 
+/*  BASE STYLING FOR LOGIN AND LOGIN */
+.NotFound,
+.Login {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* LOGIN PAGE */
+
 .loginTitle {
   font-family: "Koulen", cursive;
-  font-size: 15vmin;
+  font-size: 6vw;
   text-shadow: 4px 4px black;
 }
+
+.loginButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.viewButton {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  margin: 1rem;
+}
+
+.viewButton:hover {
+  background-color: #61dafb;
+  color: white;
+  cursor: pointer;
+}
+
+.github {
+  border: 0;
+  font-size: 16px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1rem;
+  transition-duration: 0.4s;
+}
+
+.github:hover {
+  color: #fff;
+  background: #82d465;
+  cursor: pointer;
+}
+.github:after {
+  background: #5cc437;
+}
+
 .App {
   text-align: center;
 }
@@ -35,34 +95,6 @@
   font-size: 15vmin;
   color: white;
   text-shadow: 3px 3px black;
-}
-
-.NotFound,
-.Login {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.viewButton {
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  transition-duration: 0.4s;
-}
-
-.viewButton:hover {
-  background-color: #61dafb;
-  color: white;
-  cursor: pointer;
 }
 
 .App-link {
