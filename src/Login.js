@@ -6,9 +6,7 @@ const Login = () => {
     <div className="Login">
       <h1 className="loginTitle">🔍 NYC RESTAURANT INSPECTATION 🔍</h1>
       <form action="/stats" className="store-selector">
-        <button type="submit" className="viewButton">
-          View Scores
-        </button>
+        <button className="viewButton">View Scores</button>
       </form>
     </div>
   );

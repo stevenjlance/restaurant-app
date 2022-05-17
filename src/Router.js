@@ -7,7 +7,7 @@ import NotFound from "./NotFound";
 const Router = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Login />}></Route>
+      <Route exact path="/" element={<Login />}></Route>
       <Route path="/stats" element={<App />}></Route>
       {/* All other routes */}
       <Route path="*" element={<NotFound />}></Route>
