@@ -1,5 +1,5 @@
 import React from "react";
-import { VictoryChart, VictoryHistogram, VictoryContainer } from "victory";
+import { VictoryChart, VictoryHistogram } from "victory";
 
 const Histogram = (props) => {
   // props.manipulateHistoData();

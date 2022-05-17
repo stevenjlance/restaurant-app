@@ -2,7 +2,6 @@ import React from "react";
 import "./css/App.css";
 import SideBar from "./SideBar";
 import CardContainer from "./CardContainer";
-import Card from "./Card";
 import Histogram from "./Histogram";
 import Table from "./Table";
 class App extends React.Component {
@@ -35,26 +34,25 @@ class App extends React.Component {
         this.setState({ data: dataHolder });
 
         // Make the histogram data
-        const histogramData = [];
         const bronxHisto = [];
         const manhattanHisto = [];
         const brooklynHisto = [];
         const siHisto = [];
         const queensHisto = [];
 
-        data.map((item) => {
+        data.forEach((item) => {
           const histoItem = {};
           if (item.score) {
             histoItem.x = parseFloat(item.score);
-            if (item.boro.toLowerCase() == "bronx") {
+            if (item.boro.toLowerCase() === "bronx") {
               bronxHisto.push(histoItem);
-            } else if (item.boro.toLowerCase() == "manhattan") {
+            } else if (item.boro.toLowerCase() === "manhattan") {
               manhattanHisto.push(histoItem);
-            } else if (item.boro.toLowerCase() == "brooklyn") {
+            } else if (item.boro.toLowerCase() === "brooklyn") {
               brooklynHisto.push(histoItem);
-            } else if (item.boro.toLowerCase() == "staten island") {
+            } else if (item.boro.toLowerCase() === "staten island") {
               siHisto.push(histoItem);
-            } else if (item.boro.toLowerCase() == "queens") {
+            } else if (item.boro.toLowerCase() === "queens") {
               queensHisto.push(histoItem);
             }
           }
@@ -97,19 +95,17 @@ class App extends React.Component {
   filterList = (searchValue) => {
     const filteredRestaurants = [];
     const filteredResults = this.state.data.filter((restaurant) => {
-      if (!restaurant.dba) return;
+      if (!restaurant.dba) return "";
       return restaurant.dba.toLowerCase().includes(searchValue.toLowerCase());
     });
     // Print values to the screen
-    let listItem = filteredResults.forEach((item) => {
+    filteredResults.forEach((item) => {
       if (!item.dba) return;
       filteredRestaurants.push(item.dba);
     });
 
     this.setState({ filteredRestaurants });
   };
-
-  manipulateHistoData = () => {};
 
   render() {
     return (

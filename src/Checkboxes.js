@@ -6,8 +6,7 @@ const CheckBoxes = (props) => {
     const borough = event.target.name;
     // Update state with borough
 
-    console.log(event.target.name);
-    props.updateBorough(event.target.name);
+    props.updateBorough(borough);
   };
   return (
     <>

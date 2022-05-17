@@ -10,7 +10,7 @@ const Search = (props) => {
     const filteredResults = props.data.filter((restaurant) => {
       if (!restaurant.dba) {
         console.log(restaurant.dba);
-        return;
+        return "";
       } else {
         return restaurant.dba.toLowerCase().includes(searchValue.toLowerCase());
       }
