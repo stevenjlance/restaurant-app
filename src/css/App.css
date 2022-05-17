@@ -189,3 +189,47 @@
   transform: perspective(100px) rotateX(-3deg) translateY(3px);
   background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
 }
+
+#histo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.note {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04aa6d;
+  color: white;
+}

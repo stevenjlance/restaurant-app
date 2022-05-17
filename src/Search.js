@@ -8,9 +8,15 @@ const Search = (props) => {
     props.updateSearch(searchValue);
     // Search values and return all values that contain the search term
     const filteredResults = props.data.filter((restaurant) => {
-      return restaurant.dba.toLowerCase().includes(searchValue.toLowerCase());
+      if (!restaurant.dba) {
+        console.log(restaurant.dba);
+        return;
+      } else {
+        return restaurant.dba.toLowerCase().includes(searchValue.toLowerCase());
+      }
     });
     // Print values to the screen
+    console.log(filteredResults);
     props.filterList(searchValue);
   };
 
