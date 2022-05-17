@@ -4,7 +4,6 @@ import SideBar from "./SideBar";
 import CardContainer from "./CardContainer";
 import Card from "./Card";
 import Histogram from "./Histogram";
-import Note from "./Note";
 import Table from "./Table";
 class App extends React.Component {
   state = {
@@ -116,8 +115,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">CAN I EAT THERE?</header>
-
-        <Note />
         <div className="grid">
           <SideBar
             updateBorough={this.updateBorough}

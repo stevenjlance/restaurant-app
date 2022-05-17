@@ -2,6 +2,7 @@ import React from "react";
 import "./css/sidebar.css";
 import CheckBoxes from "./Checkboxes";
 import Search from "./Search";
+import Note from "./Note";
 const SideBar = (props) => {
   return (
     <div className="sidebar">
@@ -13,6 +14,7 @@ const SideBar = (props) => {
         restaurants={props.restaurants}
       />
       <CheckBoxes updateBorough={props.updateBorough} />
+      <Note />
     </div>
   );
 };
