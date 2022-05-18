@@ -39,7 +39,7 @@ class App extends React.Component {
         const brooklynHisto = [];
         const siHisto = [];
         const queensHisto = [];
-
+        // Push histogram data
         data.forEach((item) => {
           const histoItem = {};
           if (item.score) {
